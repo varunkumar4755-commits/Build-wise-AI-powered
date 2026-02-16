@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuildWise — AI Construction Planning</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">BuildWise</div>
+    <div class="nav-links">
+      <button id="modeToggle" class="btn mode-btn">🌙 Dark</button>
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h1>Generative AI for Construction Planning</h1>
+      <p>Enter project parameters to generate detailed cost, resources, schedule, and optimization insights.</p>
+    </div>
+
+    <div class="hero-card">
+      <h3>Enter Project Details</h3>
+      <form id="projectForm">
+
+        <label><strong>Project Type</strong></label>
+        <select id="type" required class="input">
+          <option value="" disabled selected>Select Project Type</option>
+          <option value="residential">Residential</option>
+          <option value="commercial">Commercial</option>
+          <option value="industrial">Industrial</option>
+        </select>
+
+        <input id="area" type="number" placeholder="Project Area (sq ft)" required class="input">
+
+        <label><strong>Location Type</strong></label>
+        <select id="location" required class="input">
+          <option value="" disabled selected>Select Location</option>
+          <option value="rural">Rural</option>
+          <option value="urban">Urban</option>
+        </select>
+
+        <input id="budget" type="number" placeholder="Estimated Budget (₹)" required class="input">
+
+        <button type="submit" class="btn full">Generate Plan</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- OUTPUT DASHBOARD -->
+  <div class="results" id="results">
+    <div class="grid">
+
+      <div class="result-card"><h4>💰 Cost Estimation</h4><p id="outCost"></p></div>
+      <div class="result-card"><h4>👷 Resource Planning</h4><p id="outResources"></p></div>
+      <div class="result-card"><h4>📅 Schedule Generation</h4><p id="outSchedule"></p></div>
+      <div class="result-card"><h4>🧱 Blueprint Insights</h4><p id="outBlueprint"></p></div>
+      <div class="result-card"><h4>🚀 Project Optimization</h4><p id="outOptimization"></p></div>
+
+    </div>
+  </div>
+
+  <footer>© 2026 BuildWise — AI Construction Planning Platform</footer>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
